@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-red: #E31E24;
+    --primary-red: #DA0000;
     --dark-bg: #111111;
 }
 
@@ -28,11 +28,9 @@ body {
     z-index: 1000;
 }
 
-.logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
+.header-logo img {
+    width: 200px;
+    height: auto;
 }
 
 .nav-buttons {
@@ -132,12 +130,33 @@ body {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .feature-paragraph {
-    padding: 2rem;
-    text-align: center;
+    text-align: left;
+}
+
+.feature-paragraph h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    max-width: 800px;
+    color: var(--primary-red);
+}
+
+.feature-paragraph h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    max-width: 500px;
+    color: var(--dark-bg);
+}
+
+.feature-paragraph p {
+    text-align: justify;
+    font-size: 1.5rem;
+    font-weight: 400;
+    max-width: 500px;
+    color: var(--dark-bg);
 }
 
 .features-grid {
@@ -184,36 +203,72 @@ body {
 /* Host Section */
 .host-section {
     padding: 4rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     background: white;
 }
 
 .host-content {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .host-content h2 {
     margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark-bg);
 }
 
 .host-content p {
     margin-bottom: 2rem;
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--dark-bg);
 }
 
 /* Footer */
+.footer,
+.footer * {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
 .footer {
     padding: 4rem 5%;
-    background: var(--dark-bg);
+    background: url('../images/footerBackground.png') no-repeat center/cover;
     color: white;
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer-grid h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-red);
+}
+
+.footer-grid p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #999;
+}
+
+.footer-grid > div:first-child {
+    max-width: 300px;
+}
+.footer-grid > div:nth-child(2) {
+    margin-left: auto;
+    margin-right: 40px; /* Add spacing between About and Socials */
+}
+
+/* Keep Socials section aligned to the right */
+.footer-grid > div:nth-child(3) {
+    margin-left: 0;
+    margin-right: 100px;
 }
 
 .footer-links {
@@ -222,16 +277,29 @@ body {
 
 .footer-links li a {
     color: #999;
+    font-size: 1rem;
+    font-weight: 500;
     text-decoration: none;
     line-height: 2;
 }
 
 .copyright {
-    text-align: center;
-    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid #333;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.copyright .left-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.copyright .right-text {
+    text-align: right;
 }
 
 @media (max-width: 768px) {
