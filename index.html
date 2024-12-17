@@ -29,10 +29,19 @@
                 <div class="search-tab">Motor</div>
             </div>
             <div class="search-inputs">
-                <input type="text" class="search-input" placeholder="Bandara, kota atau alamat">
+                <div class="input-group">
+                    <label class="input-label">Pick-up & pengembalian</label>
+                    <input type="text" class="search-input" placeholder="Bandara, kota atau alamat">
+                </div>
                 <input type="text" class="search-input" placeholder="Lokasi pengembilan berbeda">
-                <input type="date" class="search-input">
-                <button class="btn btn-primary">Telusuri</button>
+                <div class="input-group">
+                    <label class="input-label">Durasi peminjaman</label>
+                    <div class="date-range-container">
+                        <input type="date" class="search-input" placeholder="Tanggal Mulai">
+                        <input type="date" class="search-input" placeholder="Tanggal Selesai">
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-telusuri">Telusuri</button>
             </div>
         </div>
     </section>
@@ -64,27 +73,25 @@
     </section>
 
     <section class="how-it-works">
-        <h2>How it works?</h2>
-        <div class="steps-grid">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <h3>Cari Kendaraan yang Sesuai</h3>
-                <p>Temukan berbagai pilihan mobil atau motor yang tersedia dari pemilik terverifikasi di platform RentGo.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <h3>Pilihan Waktu Sewa</h3>
-                <p>Tentukan durasi sewa yang sesuai dengan kebutuhan Anda, tanpa terbatas jam operasional.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <h3>Selesaikan Pembayaran</h3>
-                <p>Proses transaksi yang cepat dan aman dengan sistem P2P Lending yang mempermudah pembayaran.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <h3>Nikmati Perjalanan Anda</h3>
-                <p>Ambil kendaraan dan nikmati perjalanan dengan fleksibilitas penuh.</p>
+        <div class="step-container">
+            <h2>How it works?</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1. Cari Kendaraan yang Sesuai</div>
+                    <p>Temukan berbagai pilihan mobil atau motor yang tersedia dari pemilik terverifikasi di platform RentGo.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2. Pilihan Waktu Sewa</div>
+                    <p>Tentukan durasi sewa yang sesuai dengan kebutuhan Anda, tanpa terbatas jam operasional.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3. Selesaikan Pembayaran</div>
+                    <p>Proses transaksi yang cepat dan aman dengan sistem P2P Lending yang mempermudah pembayaran.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4. Nikmati Perjalanan Anda</div>
+                    <p>Ambil kendaraan dan nikmati perjalanan dengan fleksibilitas penuh.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -93,7 +100,7 @@
         <div class="host-content">
             <h2>Bergabung menjadi Host</h2>
             <p>Dapatkan penghasilan tambahan dengan menyewakan kendaraan Anda! RentGo menghubungkan Anda dengan penyewa potensial, memberikan fleksibilitas penuh dalam pengaturan waktu dan harga.</p>
-            <a href="#" class="btn btn-primary">Daftar sekarang!</a>
+            <a href="#" class="btn btn-primary btn-large">Daftar sekarang!</a>
         </div>
     </section>
 
