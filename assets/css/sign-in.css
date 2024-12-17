@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    background: linear-gradient(to bottom, #000000, #4a0000);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 120px;
+    height: 40px;
+}
+
+.welcome-text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-text h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.welcome-text p {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.welcome-text .rentgo {
+    color: #808080;
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Style saat input aktif/sedang mengetik */
+input:focus {
+    border-color: #ff0000;
+    border-width: 2px;
+    color: #ff0000;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.2);
+}
+
+/* Style untuk placeholder default */
+input::placeholder {
+    color: #666;
+}
+
+/* Style untuk placeholder saat input aktif */
+input:focus::placeholder {
+    color: #ff0000;
+}
+
+/* Style untuk password saat visible */
+.password-input input[type="text"] {
+    color: #333;
+}
+
+.password-input input[type="text"]:focus {
+    color: #ff0000;
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-input input[type="password"] {
+    -webkit-text-security: disc;
+    font-family: text-security-disc;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
+
+.toggle-password.visible .eye-icon {
+    opacity: 1;
+}
+
+.eye-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #ff0000;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .right-panel {
+        padding: 1rem;
+    }
+}
+

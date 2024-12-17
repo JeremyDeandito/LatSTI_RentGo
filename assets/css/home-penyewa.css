@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+:root {
+    --primary-red: #DA0000;
+    --dark-bg: #111111;
+}
+
+body {
+    line-height: 1.5;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header-logo .logo {
+    height: 40px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/heroBackground.png') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 5%;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.search-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.search-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-tab {
+    color: #666;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-tab.active {
+    background: black;
+    color: white;
+    border-radius: 20px;
+}
+
+.search-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+    min-width: 0;
+}
+
+.btn-telusuri {
+    background: #DA0000;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    min-width: 120px;
+    transition: background-color 0.3s;
+}
+
+.btn-telusuri:hover {
+    background: #cc0000;
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 5%;
+    background: white;
+}
+
+.feature-paragraphs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.feature-paragraph {
+    text-align: left;
+}
+
+.feature-paragraph h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    max-width: 800px;
+    color: var(--primary-red);
+}
+
+.feature-paragraph h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    max-width: 500px;
+    color: var(--dark-bg);
+}
+
+.feature-paragraph p {
+    text-align: justify;
+    font-size: 1.5rem;
+    font-weight: 400;
+    max-width: 500px;
+    color: var(--dark-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 2rem;
+    border: 1px solid var(--dark-bg);
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* How it works Section */
+.how-it-works {
+    padding: 4rem 5%;
+    background: var(--dark-bg);
+    color: white;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+}
+
+.step-card {
+    padding: 1rem;
+}
+
+.step-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+}
+
+/* Host Section */
+.host-section {
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: white;
+}
+
+.host-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.host-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark-bg);
+}
+
+.host-content p {
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--dark-bg);
+}
+
+/* Footer */
+.footer,
+.footer * {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.footer {
+    padding: 4rem 5%;
+    background: url('../images/footerBackground.png') no-repeat center/cover;
+    color: white;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer-grid h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-red);
+}
+
+.footer-grid p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #999;
+}
+
+.footer-grid > div:first-child {
+    max-width: 300px;
+}
+.footer-grid > div:nth-child(2) {
+    margin-left: auto;
+    margin-right: 40px; /* Add spacing between About and Socials */
+}
+
+/* Keep Socials section aligned to the right */
+.footer-grid > div:nth-child(3) {
+    margin-left: 0;
+    margin-right: 100px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li a {
+    color: #999;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 2;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.copyright .left-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.copyright .right-text {
+    text-align: right;
+}
+
+.listings {
+    padding: 4rem 5%;
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.listings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.listings-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.search-input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter {
+    padding: 0.75rem 1.5rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.car-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-image {
+    height: 180px;
+    background-color: #f5f5f5;
+}
+
+.car-details {
+    padding: 1.5rem;
+}
+
+.car-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.car-location {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.car-features {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.feature {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.car-price {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.car-price span {
+    font-weight: 600;
+    color: #000;
+}
+
+.rent-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.rent-button:hover {
+    background-color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .car-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .car-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-inputs {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}

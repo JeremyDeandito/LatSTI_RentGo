@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentGo Login</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="RentGo Logo" class="logo">
+            </div>
+            <div class="welcome-text">
+                <p>Start Renting with</p>
+                <p class="rentgo">RentGo!</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="form-container">
+                <p class="welcome-back">Welcome back</p>
+                <h1>Login to your account</h1>
+                <form action="page-penyewa.html">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="balarnia@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-input">
+                            <input type="password" id="password" placeholder="Enter your password" required>
+                            <button type="button" class="toggle-password" onclick="togglePassword()">
+                                <img src="assets/eye.png" alt="Toggle Password" class="eye-icon">
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Create account</button>
+                </form>
+                <p class="signup-link">Don't Have An Account? <a href="signin.html">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            var toggleButton = document.querySelector(".toggle-password");
+            
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordInput.classList.add("password-visible");
+                toggleButton.classList.add("visible");
+            } else {
+                passwordInput.type = "password";
+                passwordInput.classList.remove("password-visible");
+                toggleButton.classList.remove("visible");
+            }
+        }
+    </script>
+</body>
+</html>
