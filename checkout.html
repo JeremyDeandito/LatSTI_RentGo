@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentGo - Checkout</title>
+    <link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img src="/placeholder.svg" alt="RentGo Logo" class="logo">
+        <nav class="nav">
+            <a href="#" class="nav-link">
+                <img src="/placeholder.svg" alt="Rental" class="nav-icon">
+                Penyewaan Saya
+            </a>
+            <a href="#" class="nav-link">
+                <img src="/placeholder.svg" alt="Help" class="nav-icon">
+                Bantuan
+            </a>
+            <div class="language">
+                <img src="/placeholder.svg" alt="Language" class="nav-icon">
+                IND
+            </div>
+            <div class="profile">
+                <img src="/placeholder.svg" alt="Profile" class="profile-img">
+                <span>Jeremy</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="checkout-grid">
+            <!-- Left Column - Forms -->
+            <div class="checkout-forms">
+                <!-- Renter Information -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <h2>Informasi Penyewa</h2>
+                        <span class="step">Step 1 of 3</span>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama" value="Jeremy" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="jeremy@gmail.com" readonly>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rental Information -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <h2>Informasi Penyewaan</h2>
+                        <span class="step">Step 2 of 3</span>
+                    </div>
+                    <p class="section-subtitle">Pilih durasi sewa Anda</p>
+
+                    <!-- Pickup -->
+                    <div class="rental-section">
+                        <h3 class="rental-type">
+                            <span class="dot"></span>
+                            Pengambilan
+                        </h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="pickup-location">Lokasi</label>
+                                <input type="text" id="pickup-location" placeholder="Bandara, kota atau alamat">
+                            </div>
+                            <div class="form-group">
+                                <label for="pickup-date">Tanggal</label>
+                                <input type="text" id="pickup-date" placeholder="Pilih tanggal">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="pickup-time">Time</label>
+                                <input type="text" id="pickup-time" placeholder="Pilih waktu">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Return -->
+                    <div class="rental-section">
+                        <h3 class="rental-type">
+                            <span class="dot"></span>
+                            Pengembalian
+                        </h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="return-location">Locations</label>
+                                <input type="text" id="return-location" placeholder="Bandara, kota atau alamat">
+                            </div>
+                            <div class="form-group">
+                                <label for="return-date">Date</label>
+                                <input type="text" id="return-date" placeholder="Pilih tanggal">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="return-time">Time</label>
+                                <input type="text" id="return-time" placeholder="Pilih waktu">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Payment Method -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <h2>Metode Pembayaran</h2>
+                        <span class="step">Step 3 of 3</span>
+                    </div>
+                    <p class="section-subtitle">Pilih metode pembayaran Anda</p>
+                    
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="bca">
+                            <span class="radio-custom"></span>
+                            <span>BCA Virtual Account</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="bri">
+                            <span class="radio-custom"></span>
+                            <span>BRI Virtual Account</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="mandiri">
+                            <span class="radio-custom"></span>
+                            <span>Mandiri Virtual Account</span>
+                        </label>
+                    </div>
+                </section>
+
+                <button class="submit-btn">Selesaikan penyewaan</button>
+            </div>
+
+            <!-- Right Column - Summary -->
+            <div class="rental-summary">
+                <div class="summary-card">
+                    <h2>Rental Summary</h2>
+                    <p class="summary-note">Price may change depending on the length of the rental and the price of your rental car.</p>
+
+                    <div class="car-preview">
+                        <img src="/placeholder.svg" alt="Nissan GT-R" class="car-image">
+                        <div class="car-info">
+                            <h3>Nissan GT-R</h3>
+                            <div class="rating">
+                                <div class="stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star-empty">★</span>
+                                </div>
+                                <span class="reviews">440+ Reviewer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Subtotal</span>
+                            <span>$80.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Tax</span>
+                            <span>$0</span>
+                        </div>
+                    </div>
+
+                    <div class="promo-code">
+                        <input type="text" placeholder="Apply promo code">
+                        <button>Apply now</button>
+                    </div>
+
+                    <div class="total-price">
+                        <div class="total-label">
+                            <h3>Total Harga</h3>
+                            <p>Harga akumulatif penyewaan</p>
+                        </div>
+                        <div class="total-amount">Rp500,000,-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

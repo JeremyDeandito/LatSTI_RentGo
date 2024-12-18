@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    height: 32px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+/* Form Sections */
+.form-section {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.step {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.section-subtitle {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Rental Sections */
+.rental-section {
+    margin-bottom: 2rem;
+}
+
+.rental-type {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #ff0000;
+    border-radius: 50%;
+}
+
+/* Payment Options */
+/* Payment Options */
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Menyembunyikan radio button default */
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+/* Styling untuk radio button yang dipilih */
+.payment-option input[type="radio"]:checked + .radio-custom {
+    border-color: #ff0000;
+}
+
+.payment-option input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background: #cc0000;
+}
+
+/* Rental Summary */
+.rental-summary {
+    position: sticky;
+    top: 2rem;
+}
+
+.summary-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.summary-note {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+.car-preview {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.car-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars {
+    color: #ffd700;
+}
+
+.star-empty {
+    color: #ddd;
+}
+
+.reviews {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.price-breakdown {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.promo-code {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.promo-code input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.promo-code button {
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.total-label p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.total-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rental-summary {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .nav {
+        gap: 1rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link span {
+        display: none;
+    }
+
+    .promo-code {
+        flex-direction: column;
+    }
+
+    .total-price {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
