@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jennifer's Chat</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="sidebar">
+      <h2>All Messages</h2>
+      <ul id="userList"></ul>
+    </div>
+
+    <div class="chat-box">
+      <div id="chatHeader"></div>
+      <div id="messages"></div>
+      <div class="chat-input">
+        <input type="text" id="message" placeholder="Type your message here...">
+        <button id="submit">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../bismillah_chat/firebase-config.js" type="module"></script>
+  <script src="chat2.js" type="module"></script>
+</body>
+</html> 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RentGo Chat</title>
+    <link rel="stylesheet" href="chat.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="RentGo" />
+      </div>
+      <div class="nav-right">
+        <a href="#" class="nav-item">
+          <img src="../assets/rental-icon.png" alt="" />
+          Penyewaan Saya
+        </a>
+        <a href="#" class="nav-item">
+          <img src="../assets/help-icon.png" alt="" />
+          Bantuan
+        </a>
+        <a href="#" class="nav-item">
+          <img src="../assets/lang-icon.png" alt="" />
+          IND
+        </a>
+        <a href="#" class="nav-item">
+          <img src="../assets/profile-icon.png" alt="" />
+          Jeremy
+        </a>
+      </div>
+    </header>
+
+    <div class="chat-container">
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h2>All Messages</h2>
+          <button class="menu-btn">⋮</button>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search or start a new chat" />
+        </div>
+        <div class="user-list" id="userList">
+          <!-- User list will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="chat-box">
+        <div class="chat-header">
+          <div class="chat-header-left">
+            <div class="user-avatar"></div>
+            <div class="user-info" id="chatHeader"></div>
+          </div>
+          <div class="chat-header-actions">
+            <button>⭐</button>
+            <button>🔍</button>
+            <button>⋮</button>
+          </div>
+        </div>
+        <div id="messages"></div>
+        <div class="chat-input">
+          <button>😊</button>
+          <input
+            type="text"
+            id="message"
+            placeholder="Type your message here..."
+          />
+          <div class="chat-actions">
+            <button>🎤</button>
+            <button id="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="../../bismillah_chat/firebase-config.js"
+      type="module"
+    ></script>
+    <script src="chat1.js" type="module"></script>
+  </body>
+</html>
