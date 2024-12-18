@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentGo Add Vehicles</title>
+    <link rel="stylesheet" href="assets/css/add-vehicle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <img src="assets/images/LogoRentGo.png" alt="Logo" class="logo">
+        </div>
+        <div class="nav-buttons">
+            <div class="header-user">
+                <span>Hanan</span>
+                <div class="user-avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul class="nav-items">
+                    <li><a href="#" class="nav-item">
+                        <i data-lucide="layout-dashboard"></i> Dashboard
+                    </a></li>
+                    <li><a href="#" class="nav-item active">
+                        <i data-lucide="car-front"></i> Vehicles
+                    </a></li>
+                    <li><a href="#" class="nav-item">
+                        <i data-lucide="book-user"></i> Bookings
+                    </a></li>
+                    <li><a href="#" class="nav-item">
+                        <i data-lucide="message-square"></i> Chat
+                    </a></li>
+                </ul>
+                <a href="#" class="nav-item logout-item">
+                    <i data-lucide="log-out"></i> Logout
+                </a>
+            </nav>
+        </aside>
+    
+        <main class="main-content">
+            <div class="content-left">
+                <div class="content-title">
+                    <h1 class="content-title-text">Add Vehicle</h1>
+                </div>
+
+                <form>
+                    <div class="form-grid">
+                        <div>
+                            <div class="form-group">
+                                <label class="form-label">NAMA UNIT</label>
+                                <input type="text" class="form-input" placeholder="Masukkan nama unit kendaraan Anda">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">MEREK</label>
+                                <input type="text" class="form-input" placeholder="Masukkan merk kendaraan Anda">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">TRANSMISI</label>
+                                <input type="text" class="form-input" placeholder="Automatic atau Manual">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">HARGA</label>
+                                <input type="text" class="form-input" placeholder="Masukkan harga yang Anda inginkan">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">STNK</label>
+                                <div class="upload-area">
+                                    <i data-lucide="file-plus-2" class="upload-icon"></i>
+                                    <div class="upload-text">Click to upload</div>
+                                    <div class="file-types">
+                                        <span class="file-type">PDF</span>
+                                        <span class="file-type">DOCX</span>
+                                        <span class="file-type">TXT</span>
+                                        <span class="file-type">> 10 MB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label class="form-label">PLAT NOMOR KENDARAAN</label>
+                                <input type="text" class="form-input" placeholder="Masukkan plat nomor kendaraan Anda">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">TIPE</label>
+                                <input type="text" class="form-input" placeholder="Masukkan tipe kendaraan Anda">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">KAPASITAS</label>
+                                <input type="text" class="form-input" placeholder="Masukkan kapasitas kendaraan Anda">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">LOKASI</label>
+                                <input type="text" class="form-input" placeholder="Domisili Anda">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">BPKB</label>
+                                <div class="upload-area">
+                                    <i data-lucide="file-plus-2" class="upload-icon"></i>
+                                    <div class="upload-text">Click to upload</div>
+                                    <div class="file-types">
+                                        <span class="file-type">PDF</span>
+                                        <span class="file-type">DOCX</span>
+                                        <span class="file-type">TXT</span>
+                                        <span class="file-type">> 10 MB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit-container">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

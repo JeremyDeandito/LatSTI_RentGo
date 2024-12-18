@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentGo Dashboard</title>
+    <link rel="stylesheet" href="assets/css/dashboard-host.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <img src="assets/images/LogoRentGo.png" alt="Logo" class="logo">
+        </div>
+        <div class="nav-buttons">
+            <div class="header-user">
+                <span>Hanan</span>
+                <div class="user-avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul class="nav-items">
+                    <li><a href="#" class="nav-item active">
+                        <i data-lucide="layout-dashboard"></i> Dashboard
+                    </a></li>
+                    <li><a href="#" class="nav-item">
+                        <i data-lucide="car-front"></i> Vehicles
+                    </a></li>
+                    <li><a href="#" class="nav-item">
+                        <i data-lucide="book-user"></i> Bookings
+                    </a></li>
+                    <li><a href="#" class="nav-item">
+                        <i data-lucide="message-square"></i> Chat
+                    </a></li>
+                </ul>
+                <a href="#" class="nav-item logout-item">
+                    <i data-lucide="log-out"></i> Logout
+                </a>
+            </nav>
+        </aside>
+    
+        <main class="main-content">
+            <div class="content-left">
+                <div class="card">
+                    <h2 class="card-title">PEMESANAN</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAMA KLIEN</th>
+                                <th>NAMA UNIT</th>
+                                <th>TANGGAL</th>
+                                <th>STATUS</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BK01</td>
+                                <td>Jeremy Deandito</td>
+                                <td>
+                                    <img src="assets/images/hondaCRV.png" alt="Honda CR-V" class="vehicle-img">
+                                    Honda CR-V 2021
+                                </td>
+                                <td>11/12/2024 to 13/12/2024</td>
+                                <td><span class="status-badge">Booked</span></td>
+                                <td>→</td>
+                            </tr>
+                            <tr>
+                                <td>BK01</td>
+                                <td>Jeremy Deandito</td>
+                                <td>
+                                    <img src="assets/images/hondaCRV.png" alt="Honda CR-V" class="vehicle-img">
+                                    Honda CR-V 2021
+                                </td>
+                                <td>11/12/2024 to 13/12/2024</td>
+                                <td><span class="status-badge">Booked</span></td>
+                                <td>→</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <div class="card" style="margin-top: 2rem;">
+                    <h2 class="card-title">NOTIFICATION</h2>
+                    <div class="notification-list">
+                        <div class="notification-item">
+                            <div class="notification-avatar">PM</div>
+                            <div class="notification-content">
+                                <div class="notification-title">John Doe booked Honda CR-V 2021 for 3 days</div>
+                                <div class="notification-time">08:45 PM on 12 March, 2024</div>
+                            </div>
+                            <div class="arrow-icon">→</div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-avatar">PM</div>
+                            <div class="notification-content">
+                                <div class="notification-title">John Doe booked Honda CR-V 2021 for 3 days</div>
+                                <div class="notification-time">08:45 PM on 12 March, 2024</div>
+                            </div>
+                            <div class="arrow-icon">→</div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-avatar">PM</div>
+                            <div class="notification-content">
+                                <div class="notification-title">John Doe booked Honda CR-V 2021 for 3 days</div>
+                                <div class="notification-time">08:45 PM on 12 March, 2024</div>
+                            </div>
+                            <div class="arrow-icon">→</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">TOTAL VEHICLES</div>
+                    <div class="stat-value">5</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">TOTAL BOOKINGS</div>
+                    <div class="stat-value">67</div>
+                </div>
+                <div class="stat-card-income">
+                    <div class="stat-label-income-container">
+                        <h1>INCOME</h1>
+                        <p>Today</p>
+                    </div>
+                    <div class="stat-value-income">Rp2.045.000,00</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

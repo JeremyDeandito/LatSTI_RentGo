@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+:root {
+    --primary-red: #DA0000;
+    --sidebar-bg: #1A1919;
+    --main-bg: #F3F4F6;
+    --text-primary: #1A1919;
+    --text-secondary: #667085;
+    --success-green: #059669;
+    --warning-yellow: #723B13;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--main-bg);
+    padding: 1rem;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    position: fixed; 
+    top: 7rem; 
+    bottom: 1rem; 
+    left: 1rem; 
+    right: 1rem; 
+    margin-top: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    margin-left: 1.5rem;
+}
+
+.header-logo img {
+    width: 200px;
+    height: auto;
+}
+
+.nav-buttons {
+    margin-right: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 260px;
+    background: var(--sidebar-bg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-radius: 0.75rem;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.logout-item {
+    margin-top: auto;
+    margin-bottom: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    display: block;
+    padding-left: 24px;
+    margin-top: 4px;
+    list-style: none;
+}
+
+.dropdown-menu .nav-item {
+    padding: 8px 16px;
+    font-size: 0.9em;
+}
+
+.nav-item {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+/* Add styles for the icons */
+.nav-item svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.32);
+    color: white;
+}
+
+.nav-item.active svg {
+    color: white;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.vehicle-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.vehicle-header h1{
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Map Section */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #e5e7eb;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Pin pulse animation styles */
+.custom-pin-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Update pin styles for Leaflet */
+.custom-pin {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-red);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--primary-red);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Metrics Grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.metric-card {
+    min-width: 0;
+    background: white;
+    border: 1px solid #CBD5E1;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.metric-info {
+    display: flex;
+    gap: 1rem;
+}
+
+.metric-icon {
+    width: 40px;
+    height: 40px;
+    background: #f3f4f6;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.metric-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-label {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.metric-time {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.metric-value {
+    font-weight: 500;
+}
+.status-badge.booked{
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    background: #ECFDF5;
+    color: var(--success-green);
+}
+.status-badge.review{
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    background: #FDF6B2;
+    color: var(--warning-yellow);
+}
+
+/* Header User Info */
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-primary);
+}
+
+.header-user span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    border: 1px solid #eee;
+}
+
+.custom-pin-container {
+    position: relative;
+    width: 40px !important;
+    height: 40px !important;
+    margin-left: -20px !important;
+    margin-top: -20px !important;
+}
+
+.custom-pin-pulse {
+    width: 40px;
+    height: 40px;
+    background: rgba(218, 0, 0, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    animation: pulse 2s infinite;
+}
+
+.custom-pin {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-red);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--primary-red);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}

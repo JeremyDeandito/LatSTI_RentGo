@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentGo Vehicles</title>
+    <link rel="stylesheet" href="assets/css/vehicle-listings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <img src="assets/images/LogoRentGo.png" alt="Logo" class="logo">
+        </div>
+        <div class="nav-buttons">
+            <div class="header-user">
+                <span>Hanan</span>
+                <div class="user-avatar"></div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul class="nav-items">
+                    <li><a href="#" class="nav-item">
+                        <i data-lucide="layout-dashboard"></i> Dashboard
+                    </a></li>
+                    <li><a href="#" class="nav-item active">
+                        <i data-lucide="car-front"></i> Vehicles
+                    </a></li>
+                    <li><a href="#" class="nav-item">
+                        <i data-lucide="book-user"></i> Bookings
+                    </a></li>
+                    <li><a href="#" class="nav-item">
+                        <i data-lucide="message-square"></i> Chat
+                    </a></li>
+                </ul>
+                <a href="#" class="nav-item logout-item">
+                    <i data-lucide="log-out"></i> Logout
+                </a>
+            </nav>
+        </aside>
+    
+        <main class="main-content">
+            <div class="content-left">
+                <div class="content-title">
+                    <h1 class="content-title-text">Vehicle Listings</h1>
+                    <div class="total-listings">
+                        TOTAL LISTINGS <span>2</span>
+                    </div>
+                </div>
+                <div class="filters-container">
+                    <div class="filters">
+                        <input type="text" placeholder="Search" class="search-input">
+                        <select class="status-filter">
+                            <option>All Status</option>
+                            <option>Booked</option>
+                            <option>In Review</option>
+                            <option>Submitted</option>
+                            <option>Rejected</option>
+                        </select>
+                    </div>
+                    <button class="add-vehicle-btn">
+                        Add Vehicle <i data-lucide="plus"></i> 
+                    </button>
+                </div>
+
+                <div class="card">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAMA UNIT</th>
+                                <th>MEREK</th>
+                                <th>TIPE</th>
+                                <th>TRANSMISSION</th>
+                                <th>CAPACITY</th>
+                                <th>LOCATION</th>
+                                <th>PRICE</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>C031</td>
+                                <td>
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="assets/images/hondaCRV.png" alt="Honda CR-V" class="vehicle-img">
+                                        Honda CR-V 2021
+                                    </div>
+                                </td>
+                                <td>Honda</td>
+                                <td>SUV</td>
+                                <td>Automatic</td>
+                                <td>7 Seats</td>
+                                <td>Bandung</td>
+                                <td>Rp650.000</td>
+                                <td><span class="status-badge booked">Booked</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-btn">
+                                            <i data-lucide="pen-line"></i>  
+                                        </button>
+                                        <button class="action-btn">
+                                            <i data-lucide="trash-2"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>C031</td>
+                                <td>
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="assets/images/hondaCRV.png" alt="Honda CR-V" class="vehicle-img">
+                                        Honda CR-V 2021
+                                    </div>
+                                </td>
+                                <td>Honda</td>
+                                <td>SUV</td>
+                                <td>Automatic</td>
+                                <td>7 Seats</td>
+                                <td>Bandung</td>
+                                <td>Rp650.000</td>
+                                <td><span class="status-badge review">In Review</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="action-btn">
+                                            <i data-lucide="pen-line"></i>  
+                                        </button>
+                                        <button class="action-btn">
+                                            <i data-lucide="trash-2"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
