@@ -6,7 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchForm = document.querySelector('.search-form');
     const searchInputs = document.querySelectorAll('.search-inputs input');
     const searchButton = document.querySelector('.btn-telusuri');
-  
+    const registerHostBtn = document.querySelector('.btn-outline');  // "Mendaftar sebagai Host" button
+    const loginBtn = document.querySelector('.btn-primary');        // "Masuk" button
+      // Add click handlers for navigation buttons
+    if (registerHostBtn) {
+        registerHostBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'register.html';
+        });
+    }
+      if (loginBtn) {
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'login.html';
+        });
+    }
     // Function to handle scroll events
     const handleScroll = () => {
       if (window.scrollY > 50) {

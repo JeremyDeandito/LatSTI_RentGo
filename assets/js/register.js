@@ -97,9 +97,9 @@ async function registerUser(email, password, name, role) {
 
     // Redirect berdasarkan role
     if (role === "host") {
-      window.location.href = "host/host.html";
+      window.location.href = "dashboard-host.html";
     } else {
-      window.location.href = "penyewa_gagal/penyewa2.html";
+      window.location.href = "home-penyewa.html";
     }
   } catch (error) {
     console.error("Full error object:", error);

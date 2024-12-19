@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="assets/js/vehicle-listings.js"></script>
 </head>
 <body>
     <header class="header">
@@ -26,16 +27,16 @@
         <aside class="sidebar">
             <nav>
                 <ul class="nav-items">
-                    <li><a href="#" class="nav-item">
+                    <li><a href="dashboard-host.html" class="nav-item">
                         <i data-lucide="layout-dashboard"></i> Dashboard
                     </a></li>
-                    <li><a href="#" class="nav-item active">
+                    <li><a href="vehicle-listings.html" class="nav-item">
                         <i data-lucide="car-front"></i> Vehicles
                     </a></li>
-                    <li><a href="#" class="nav-item">
+                    <li><a href="bookings-host.html" class="nav-item">
                         <i data-lucide="book-user"></i> Bookings
                     </a></li>
-                    <li><a href="#" class="nav-item">
+                    <li><a href="/assets/chat/a/chat2.html" class="nav-item">
                         <i data-lucide="message-square"></i> Chat
                     </a></li>
                 </ul>
@@ -64,9 +65,11 @@
                             <option>Rejected</option>
                         </select>
                     </div>
-                    <button class="add-vehicle-btn">
-                        Add Vehicle <i data-lucide="plus"></i> 
-                    </button>
+                    <div class="add-vehicle-container">
+                        <a href="add-vehicle.html" class="add-vehicle-btn">
+                            Add Vehicle <i data-lucide="plus"></i> 
+                        </a>
+                    </div>
                 </div>
 
                 <div class="card">
@@ -150,5 +153,6 @@
     <script>
         lucide.createIcons();
     </script>
+    <script type="module" src="assets/js/vehicle-listings.js"></script>
 </body>
 </html>
